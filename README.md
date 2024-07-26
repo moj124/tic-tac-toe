@@ -5,7 +5,7 @@
 - [Setup](#setup)
 - [Motivation](#motivation)
 
- [VIEW LIVE HERE]((https://polite-flan-dd06a0.netlify.app/) 
+ [VIEW LIVE HERE](https://polite-flan-dd06a0.netlify.app/) 
 ## Setup
 ```
   npm install
