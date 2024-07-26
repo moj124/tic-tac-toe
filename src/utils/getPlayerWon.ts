@@ -1,4 +1,4 @@
-import Player from "../types/player";
+import Player from "../types/Player";
 
 const getPlayerWon = (gameState: number[], playerConfig: Player[]) => {
     const winConditions = [

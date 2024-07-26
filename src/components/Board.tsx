@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GameState from "../types/GameState";
+import GameState from '../types/GameState';
 import getPlayerWon from "../utils/getPlayerWon";
 import playerConfig from "../utils/playerConfig";
 import Button from "./Button";

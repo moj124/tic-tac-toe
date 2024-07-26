@@ -1,10 +1,8 @@
-import Player from "./player"
+import Player from "./Player";
 
-interface GameState {
+export default interface GameState {
     board: number[],
     currentPlayer: Player,
     winner: Player | null,
     reset: boolean,
 }
-
-export default GameState;
