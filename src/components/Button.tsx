@@ -4,7 +4,7 @@ interface ButtonProps {
     key: number;
     value: number;
     index: number;
-    hasWon: boolean;
+    hasWon: boolean
     onClick: (key: number) => void;
 }
 
@@ -25,16 +25,18 @@ export default function Button({value, index, onClick, hasWon } :ButtonProps) {
           onClick={() => onClick(index)}
           disabled={isDisabled}
           className='
-            bg-white
-            text-black
-            border-gray-100
+            bg-dark-background
+            text-gray-300
+            border-dark-border
             border-2
             border-solid
-            text-4xl
+            text:sm
+            sm:text-4xl
             rounded
             font-bold
             p-8
-            size-28
+            size-auto
+            sm:size-28
           '
           >
             {symbol}

@@ -4,5 +4,5 @@ export default interface GameState {
     board: number[],
     currentPlayer: Player,
     winner: Player | null,
-    reset: boolean,
+    isDraw: boolean,
 }
