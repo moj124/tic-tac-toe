@@ -1,6 +1,6 @@
 import Player from "../types/player";
 
-const getPlayerWon = (gameState: number[], playerConfig: Record<number, Player>) => {
+const getPlayerWon = (gameState: number[], playerConfig: Player[]) => {
     const winConditions = [
       // rows
       [0, 1, 2],
@@ -18,12 +18,12 @@ const getPlayerWon = (gameState: number[], playerConfig: Record<number, Player>)
     for (const condition of winConditions) {
       const [a, b, c] = condition;
       
-      if ( (gameState[a] === 1) && (gameState[b] === 1) && (gameState[c] === 1)){
-        return playerConfig[1];
+      if ( (gameState[a] === playerConfig[0].value) && (gameState[b] === playerConfig[0].value) && (gameState[c] === playerConfig[0].value)){
+        return playerConfig[0];
       }
   
-      if ( (gameState[a] === -1) && (gameState[b] === -1) && (gameState[c] === -1)) {
-        return playerConfig[2];
+      if ( (gameState[a] === playerConfig[1].value) && (gameState[b] === playerConfig[1].value) && (gameState[c] === playerConfig[1].value)) {
+        return playerConfig[1];
       }
     }
   

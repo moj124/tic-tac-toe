@@ -1,13 +1,23 @@
+import playerConfig from "../utils/playerConfig";
+
 interface ButtonProps {
     key: number;
     value: number;
     index: number;
+    hasWon: boolean;
     onClick: (key: number) => void;
 }
 
-export default function Button({value, index, onClick } :ButtonProps) {
-  const isDisabled = value !== 0;
-  const symbol = value === 1 ? 'X' : value === -1 ? '0' : '';
+export default function Button({value, index, onClick, hasWon } :ButtonProps) {
+  const isDisabled = (value !== 0) || hasWon;
+
+  const getPlayerSymbol = (value: number) => {
+    if (value === playerConfig[0].value) return playerConfig[0].symbol;
+    if (value === playerConfig[1].value) return playerConfig[1].symbol;
+    return '';
+  }
+
+  const symbol = getPlayerSymbol(value);
 
   return (
     <>
