@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-[<p align="center"><img src="https://github.com/moj124/tic-tac-toe/blob/main/public/tictactoe.png" width="50%"><p>](https://polite-flan-dd06a0.netlify.app/)
+[<p align="center"><img src="https://github.com/moj124/tic-tac-toe/blob/main/public/tictactoe.png" width="50%"/><p>](https://polite-flan-dd06a0.netlify.app/)
     
 - [Setup](#setup)
 - [Motivation](#motivation)
