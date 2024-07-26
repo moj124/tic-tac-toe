@@ -104,8 +104,8 @@ export default function Board() {
               <button 
                 onClick={resetGame}
                 className='
-                bg-white
-                text-black
+                bg-dark-blue
+                text-white
                   w-full
                   m-auto
                   sm:w-8/12
