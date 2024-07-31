@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import GameState from '../types/GameState';
 import getPlayerWon from "../utils/getPlayerWon";
 import playerConfig from "../utils/playerConfig";
@@ -28,6 +28,13 @@ export default function Board() {
       currentPlayer: currentPlayer.value === 1 ? playerConfig[1] : playerConfig[0], 
     }
 
+    
+    const getWinner = getPlayerWon(newGameState.board, playerConfig);
+    if( getWinner ) {
+      setGameState({...newGameState, winner: getWinner});
+      return;
+    }
+    
     const nonZeroCells = newGameState.board.filter((elem) => elem !== 0).length;
     const reachedDraw = nonZeroCells === BOARD_SIZE;
     if (reachedDraw) {
@@ -35,18 +42,12 @@ export default function Board() {
       return;
     }
 
-    const getWinner = getPlayerWon(newGameState.board, playerConfig);
-    if( getWinner ) {
-      setGameState({...newGameState, winner: getWinner});
-      return;
-    }
-
     setGameState(newGameState);
   };
 
-  const resetGame = () => {
+  const resetGame = useCallback(() => {
     setGameState(initialGameState);
-  }
+  }, []);
   
   return (
     <>

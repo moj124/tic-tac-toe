@@ -35,8 +35,7 @@ export default function Button({value, index, onClick, hasWon } :ButtonProps) {
             rounded
             font-bold
             p-8
-            size-auto
-            sm:size-28
+            size-28
           '
           >
             {symbol}

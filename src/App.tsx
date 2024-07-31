@@ -1,6 +1,6 @@
 import Board from './components/Board';
 
-export default function App() {
+const App = () => {
   return (
     <div className="h-screen flex flex-col sm:flex-row gap-5 bg-dark-blue">
       <main className='flex flex-col m-auto'>
@@ -11,3 +11,4 @@ export default function App() {
     </div>
   )
 }
+export default App;
